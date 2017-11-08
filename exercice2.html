@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exerciceCanvas2</title>
+    <script src="jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400">
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+    <script>
+      var c=document.getElementById('canvas');
+      var ctx=c.getContext("2d");
+      //tracé du toit
+      ctx.fillStyle = '#D7823D';
+      ctx.rotate(0.785);
+      ctx.fillRect(140,-70,70.5,70.5);
+      ctx.closePath();      // Fermeture du chemin (facultative)
+      //tracé des murs
+      ctx.fillStyle = '#A1D8E6';
+      ctx.rotate(-0.785);
+      ctx.fillRect(98,100,100,100);
+      ctx.fill();
+      //tracé de la première fenêtre
+      ctx.fillStyle = '#C9C9C9';
+      ctx.fillRect(108,108,20,20);
+      ctx.fill();
+      //tracé de la première fenêtre
+      ctx.fillRect(108,108,20,20);
+      ctx.fill();
+      //tracé de la première fenêtre
+      ctx.fillRect(168,108,20,20);
+      ctx.fill();
+      //tracé de la porte
+      ctx.fillRect(133,160,30,40);
+      ctx.fill();
+
+
+    </script>
+  </body>
+</html>
